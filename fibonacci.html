@@ -1,0 +1,25 @@
+<div id="fibonacci"></div>
+
+<script>
+var fibonacci = function (nb) {
+
+	var a = 0;
+	var b = 1;
+
+	for (i = 0; i <= nb; i++) {
+		c = a + b;
+		document.getElementById('fibonacci').append(a + ' ');
+		a = b;
+		b = c;
+	}
+}
+
+var nb = prompt('Entrez un nombre');
+
+while (isNaN(nb) === true) {
+	var nb = prompt('Votre saisie est incorrecte. Veuillez entrer un nombre');
+}
+
+fibonacci(nb);
+
+</script>
